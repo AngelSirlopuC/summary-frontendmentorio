@@ -1,4 +1,180 @@
-
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+:root {
+    --color-light-red : hsl(0, 100%, 67%);
+    --color-orangey-yellow: hsl(39, 100%, 56%);
+    --color-green-teal: hsl(166, 100%, 37%);
+    --color-cobalt-blue: hsl(234, 85%, 45%);
+
+    
+    --color-light-red-opacity : hsla(0, 100%, 95%, 0.8);
+    --color-orangey-yellow-opacity: hsla(39, 100%, 95%, 0.8);
+    --color-green-teal-opacity: hsla(166, 100%, 95%, 0.8);
+    --color-cobalt-blue-opacity: hsla(234, 85%, 95%, 0.8);
+
+    --color-light-slate-blue: hsl(252, 100%, 67%);
+    --color-light-royal-blue: hsl(241, 81%, 54%);
+    --color-violet-blue: hsla(256, 72%, 46%, 1);
+    --color-persian-blue: hsla(241, 72%, 46%, 0);
+    --color-white: hsl(0, 0%, 100%);
+    --color-pale-blue: hsl(221, 100%, 96%);
+    --color-light-lavender: hsl(241, 100%, 89%);
+    --color-dark-gray-blue: hsl(224, 30%, 27%);
+    --color-dark-gray-blue-opacity: hsla(224, 30%, 67%,0.8);
+}
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype'),
+    url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype'),
+    url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype'),
+    url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "HankenGrotesk";
+}
+p{
+    margin: 0;
+    font-size: 18px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen{
+    background: linear-gradient(0deg, var(--color-light-royal-blue) 0%, var(--color-light-slate-blue) 100%);
+    color: var(--color-white);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem 2rem 4rem;
+    gap: 10px;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.resumen-subtitle{
+    color: var(--color-pale-blue);
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.resumen-circle{
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(0deg, var(--color-persian-blue) 0% ,var(--color-violet-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resumen-circle > h1{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.resumen-circle > span{
+    font-size: 14px;
+    color: var(--color-light-lavender);
+}
+
+.resumen-title{
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.resumen-detail{
+    font-size: 14px;
+    color: var(--color-light-lavender);
+}
+
+.summary{
+    padding: 1rem 2rem;
+}
+.summary-title{
+    font-weight: bold;
+}
+.summary-list{
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+.summary-list-item{
+    margin-bottom: 10px;
+}
+.summary-list-item-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--color-light-red-opacity);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.summary-list-item-row > span:first-child{
+    color: var(--color-light-red);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.summary-list-item-row > span:last-child{
+    color: var(--color-dark-gray-blue-opacity);
+
+}
+
+.summary-list-item-row > span:last-child > b{
+    color: var(--color-dark-gray-blue);
+}
+
+.summary-list-item:nth-child(2) > .summary-list-item-row{
+    background-color: var(--color-orangey-yellow-opacity);
+}
+
+.summary-list-item:nth-child(2) > .summary-list-item-row > span:first-child{
+    color:  var(--color-orangey-yellow);
+}
+
+.summary-list-item:nth-child(3) > .summary-list-item-row{
+    background-color: var(--color-green-teal-opacity);
+}
+
+.summary-list-item:nth-child(3) > .summary-list-item-row > span:first-child{
+    color:  var(--color-green-teal);
+}
+
+.summary-list-item:nth-child(4) > .summary-list-item-row{
+    background-color: var(--color-cobalt-blue-opacity);
+}
+
+.summary-list-item:nth-child(4) > .summary-list-item-row > span:first-child{
+    color:  var(--color-cobalt-blue);
+}
+
+.summary-button{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background-color: var(--color-dark-gray-blue);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 3rem;
+}
